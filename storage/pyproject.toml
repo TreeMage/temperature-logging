@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "storage"
+version = "0.1.0"
+description = ""
+authors = ["Johannes Kohlmann <johannes.kohlmann@outlook.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
