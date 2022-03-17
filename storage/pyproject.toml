@@ -6,6 +6,9 @@ authors = ["Johannes Kohlmann <johannes.kohlmann@outlook.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.8"
+dataclasses-json = "^0.5.6"
+redis = "^4.1.4"
+loguru = "^0.6.0"
 
 [tool.poetry.dev-dependencies]
 
