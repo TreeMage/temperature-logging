@@ -1,0 +1,11 @@
+{
+    "measurement_config": {
+        "interval": 5
+    },
+    "redis_config": {
+        "host": "localhost",
+        "port": 6379,
+        "queue": "measurement",
+        "db": 0
+    }
+}

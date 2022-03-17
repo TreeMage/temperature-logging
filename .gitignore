@@ -1,5 +1,13 @@
 # Misc
 .vscode/
+
+#Poetry
+poetry.lock
+
+#Python
+__pycache__/
+.venv/
+
 # React
 # Logs
 logs
