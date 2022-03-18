@@ -13,7 +13,7 @@ class RedisConfig:
 
 @dataclass_json
 @dataclass(frozen=True)
-class DatabaseConfig:
+class StorageConfig:
     path: str
     table: str
 
@@ -21,6 +21,7 @@ class DatabaseConfig:
 @dataclass_json
 @dataclass
 class AppConfig:
-    measurement_buffer: int
+    buffer_size: int
+    redis_retry_interval: int
     redis_config: RedisConfig
-    database_config: DatabaseConfig
+    storage_config: StorageConfig

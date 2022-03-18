@@ -1,5 +1,6 @@
 {
-    "measurement_buffer": 5,
+    "buffer_size": 5,
+    "redis_retry_interval": 10,
     "redis_config": {
         "host": "localhost",
         "port": 6379,
@@ -7,8 +8,8 @@
         "db": 0,
         "charset": "utf-8"
     },
-    "database_config": {
-        "path": "storage.db",
+    "storage_config": {
+        "path": "/tmp/storage.db",
         "table": "measurements"
     }
 }
