@@ -1,6 +1,8 @@
 {
+    "measurement_delay": 600, 
     "measurement_config": {
-        "interval": 5
+        "pin": "D4",
+        "num_measurements": 10
     },
     "redis_config": {
         "host": "localhost",

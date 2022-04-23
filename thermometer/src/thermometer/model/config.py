@@ -13,11 +13,13 @@ class RedisConfig:
 @dataclass_json
 @dataclass(frozen=True)
 class MeasurementConfig:
-    interval: int
+    num_measurments: int
+    pin: str
 
 
 @dataclass_json
 @dataclass(frozen=True)
 class AppConfig:
+    measurement_delay: int
     measurement_config: MeasurementConfig
     redis_config: RedisConfig

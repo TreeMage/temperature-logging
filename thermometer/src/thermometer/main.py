@@ -13,10 +13,10 @@ def run(config_path: Path):
     with open(config_path, "r") as f:
         config = AppConfig.from_json(f.read())
     
-    interval = config.measurement_config.interval
+    delay = config.meeasurment_delay
 
     redis_service = RedisService(config.redis_config)
-    measurement_service = MeasurementService()
+    measurement_service = MeasurementService(config.measurement_config)
 
     while True:
         measurement = measurement_service.measure()
@@ -24,7 +24,7 @@ def run(config_path: Path):
             redis_service.send(measurement)
         except Exception as e:
             logger.error(f"Failed to publish measurement to Redis: {e}")
-        time.sleep(interval)
+        time.sleep(delay)
 
 if __name__ == "__main__":
     args = sys.argv[1:]
