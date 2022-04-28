@@ -13,7 +13,7 @@ class RedisConfig:
 @dataclass_json
 @dataclass(frozen=True)
 class MeasurementConfig:
-    num_measurments: int
+    num_measurements: int
     pin: str
 
 

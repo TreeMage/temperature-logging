@@ -20,11 +20,11 @@ class MeasurementService:
 
     def measure(self) -> Measurement:
         measurements = []
-        for _ in range(self.config.num_measurments):
+        for _ in range(self.config.num_measurements):
             measurements.append(self._measure())
 
-        avg_temp = sum(map(lambda m: m[0], measurements)) / self.config.num_measurments
-        avg_humidity = sum(map(lambda m: m[1], measurements)) / self.config.num_measurments
+        avg_temp = sum(map(lambda m: m[0], measurements)) / self.config.num_measurements
+        avg_humidity = sum(map(lambda m: m[1], measurements)) / self.config.num_measurements
 
         return Measurement(
             temperature=avg_temp,

@@ -13,8 +13,7 @@ def run(config_path: Path):
     with open(config_path, "r") as f:
         config = AppConfig.from_json(f.read())
     
-    delay = config.meeasurment_delay
-
+    delay = config.measurement_delay
     redis_service = RedisService(config.redis_config)
     measurement_service = MeasurementService(config.measurement_config)
 
